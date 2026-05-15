@@ -616,10 +616,11 @@ app.get("/", (req, res) => {
   res.send("Bot online!");
 });
 
-app.listen(3000, () => {
-  console.log("🌐 Servidor web online.");
-});
+const PORT = process.env.PORT || 3000;
 
+app.listen(PORT, () => {
+  console.log(`🌐 Servidor web online na porta ${PORT}`);
+});
 
 // ================= LOGIN =================
 client.login(process.env.TOKEN);
