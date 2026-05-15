@@ -608,5 +608,18 @@ process.on("uncaughtException", err => {
   console.error("Uncaught Exception:", err);
 });
 
+// ================= UPTIME ROBOT =================
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bot online!");
+});
+
+app.listen(3000, () => {
+  console.log("🌐 Servidor web online.");
+});
+
+
 // ================= LOGIN =================
 client.login(process.env.TOKEN);
