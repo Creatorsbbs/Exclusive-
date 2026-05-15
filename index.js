@@ -243,7 +243,8 @@ Explique sua situação com o máximo de detalhes possível para agilizar o aten
   });
 
       }
-
+   }
+    
   } catch (err) {
 
     console.log("Erro painel:", err);
