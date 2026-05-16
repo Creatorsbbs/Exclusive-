@@ -159,7 +159,7 @@ client.on("interactionCreate", async (interaction) => {
 
     if (interaction.commandName === "painel") {
 
-      await interaction.deferReply({ ephemeral: true });
+      await interaction.deferReply();
 
       const embed = new EmbedBuilder()
         .setTitle("🎫 CENTRAL DE ATENDIMENTO")
