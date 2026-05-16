@@ -192,7 +192,7 @@ Explique sua situação com o máximo de detalhes possível para agilizar o aten
         new ButtonBuilder()
           .setCustomId("ticket_suporte")
           .setLabel("💬 Suporte")
-          .setStyle(ButtonStyle.Success),
+          .setStyle(ButtonStyle.Primary),
 
         new ButtonBuilder()
           .setCustomId("ticket_vendas")
@@ -202,12 +202,12 @@ Explique sua situação com o máximo de detalhes possível para agilizar o aten
         new ButtonBuilder()
           .setCustomId("ticket_denuncia")
           .setLabel("🚨 Denúncia")
-          .setStyle(ButtonStyle.Danger),
+          .setStyle(ButtonStyle.Primary),
 
         new ButtonBuilder()
           .setCustomId("ticket_parceria")
           .setLabel("🤝 Parceria")
-          .setStyle(ButtonStyle.Secondary)
+          .setStyle(ButtonStyle.Primary)
       );
 
       return interaction.editReply({
