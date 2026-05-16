@@ -159,7 +159,7 @@ client.on("interactionCreate", async (interaction) => {
 
     if (interaction.commandName === "painel") {
 
-      await interaction.deferReply();
+      await interaction.deferReply({ ephemeral: true });
 
       const embed = new EmbedBuilder()
         .setTitle("🎫 CENTRAL DE ATENDIMENTO")
@@ -183,7 +183,7 @@ Propostas de parceria, divulgação ou colaboração entre servidores.
 📌 Importante:
 Explique sua situação com o máximo de detalhes possível para agilizar o atendimento.
 `)
-        .setColor("#2b2d31");
+        .setColor("#3aa3e7")
         .setImage("https://cdn.discordapp.com/attachments/1264564541979627604/1504187640524701726/file_000000005270720e895d4916721bd3ce.png?ex=6a095f27&is=6a080da7&hm=39d656aa3f8eead63f35dfa32a8347ee4ea99f470020d5b5691ba3da9ae9507d&")
         .setThumbnail("https://cdn.discordapp.com/attachments/1264564541979627604/1504187640524701726/file_000000005270720e895d4916721bd3ce.png?ex=6a095f27&is=6a080da7&hm=39d656aa3f8eead63f35dfa32a8347ee4ea99f470020d5b5691ba3da9ae9507d&");
 
@@ -328,7 +328,7 @@ Seu ticket foi criado com sucesso e nossa equipe já foi notificada.
 
 ✨ Equipe de Suporte
 `)
-        .setColor("Green");
+        .setColor("#3aa3e7")
         .setImage("https://cdn.discordapp.com/attachments/1264564541979627604/1504187640524701726/file_000000005270720e895d4916721bd3ce.png?ex=6a095f27&is=6a080da7&hm=39d656aa3f8eead63f35dfa32a8347ee4ea99f470020d5b5691ba3da9ae9507d&")
         .setThumbnail("https://cdn.discordapp.com/attachments/1264564541979627604/1504187640524701726/file_000000005270720e895d4916721bd3ce.png?ex=6a095f27&is=6a080da7&hm=39d656aa3f8eead63f35dfa32a8347ee4ea99f470020d5b5691ba3da9ae9507d&");
 
@@ -474,7 +474,7 @@ Sua ticket recebeu uma nova resposta da equipe.
 
 Volte ao servidor para continuar o atendimento.
 `)
-        .setColor("Blue")
+        .setColor("#3aa3e7")
         .setTimestamp();
 
       await ticketUser.send({
