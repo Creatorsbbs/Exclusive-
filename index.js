@@ -209,22 +209,10 @@ Explique sua situação com o máximo de detalhes possível para agilizar o aten
           .setStyle(ButtonStyle.Secondary)
       );
 
-      if (interaction.isChatInputCommand()) {
-
-  return interaction.editReply({
-    embeds: [embed],
-    components: [row]
-  });
-      }
-
-} else {
-
-  return interaction.channel.send({
-    embeds: [embed],
-    components: [row]
-  });
-  
-}
+      return message.channel.send({
+  embeds: [embed],
+  components: [row]
+});
     
   } catch (err) {
 
