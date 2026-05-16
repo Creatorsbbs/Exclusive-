@@ -277,41 +277,29 @@ client.on("interactionCreate", async (interaction) => {
   parent: category.id,
 
   permissionOverwrites: [
-    {
-      id: guild.id,
-      deny: [PermissionsBitField.Flags.ViewChannel]
-    },
+  {
+    id: guild.id,
+    deny: [PermissionsBitField.Flags.ViewChannel]
+  },
 
-    {
-      id: user.id,
-      allow: [
-        PermissionsBitField.Flags.ViewChannel,
-        PermissionsBitField.Flags.SendMessages,
-        PermissionsBitField.Flags.ReadMessageHistory
-      ]
-    },
+  {
+    id: user.id,
+    allow: [
+      PermissionsBitField.Flags.ViewChannel,
+      PermissionsBitField.Flags.SendMessages,
+      PermissionsBitField.Flags.ReadMessageHistory
+    ]
+  },
 
-    ...(staffRole ? [{
-      id: staffRole.id,
-      allow: [
-        PermissionsBitField.Flags.ViewChannel,
-        PermissionsBitField.Flags.SendMessages
-      ]
-    }] : []),
+  ...(staffRole ? [{
+    id: staffRole.id,
+    allow: [
+      PermissionsBitField.Flags.ViewChannel,
+      PermissionsBitField.Flags.SendMessages
+    ]
+  }] : []),
 
-    ...extraRoles.map(roleId => ({
-      id: roleId,
-      allow: [
-        PermissionsBitField.Flags.ViewChannel,
-        PermissionsBitField.Flags.SendMessages,
-        PermissionsBitField.Flags.ReadMessageHistory
-      ]
-    }))
-  ]
-});
-          
-
-  ...(extraRoles.map(roleId => ({
+  ...extraRoles.map(roleId => ({
     id: roleId,
     allow: [
       PermissionsBitField.Flags.ViewChannel,
