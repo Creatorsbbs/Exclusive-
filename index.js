@@ -318,7 +318,7 @@ client.on("interactionCreate", async (interaction) => {
       PermissionsBitField.Flags.SendMessages,
       PermissionsBitField.Flags.ReadMessageHistory
     ]
-  })))
+  }))
 ]
 
       ticketOwners.set(channel.id, user.id);
