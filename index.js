@@ -308,7 +308,8 @@ client.on("interactionCreate", async (interaction) => {
     ]
   }))
 ]
-
+});
+    
       ticketOwners.set(channel.id, user.id);
 
       ticketData.set(channel.id, {
