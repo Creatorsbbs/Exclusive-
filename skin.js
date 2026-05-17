@@ -2,8 +2,6 @@ const {
     EmbedBuilder
 } = require("discord.js");
 
-const fetch = require("node-fetch");
-
 module.exports = async (interaction) => {
 
     if (interaction.commandName !== "skin") return;
